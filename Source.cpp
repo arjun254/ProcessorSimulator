@@ -16,6 +16,10 @@
 
 int main()
 {
+	/*
+	* Ask user input for the name of romFile, number of iterations,
+	* and the type of simulator engine.
+	*/
 	std::string romFileName;
 	std::cout << "Rom? ";
 	std::cin >> romFileName;
@@ -49,6 +53,10 @@ int main()
 	
 	Timer timer;	
 
+	/*
+	* Set Memory of the simulator engine. Initialize the timer 
+	* and start executing the instructions from address 0x00.
+	*/
 	for (int i = 0; i < count; ++i)
 	{
 		se->SetMemory(rom);
